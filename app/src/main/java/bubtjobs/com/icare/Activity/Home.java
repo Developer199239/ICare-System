@@ -16,6 +16,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import bubtjobs.com.icare.Fragment.Add_Profile;
 import bubtjobs.com.icare.Fragment.View_All_Profile;
 import bubtjobs.com.icare.R;
 
@@ -24,15 +25,16 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     Fragment currentFragment;
     FragmentManager manager;
     FragmentTransaction transaction;
+    Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("ICare");
-        //toolbar.setLogo(R.drawable.app_logo_2);
-        setSupportActionBar(toolbar);
 
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("ICare");
+        toolbar.setLogo(R.drawable.app_logo_2);
+        setSupportActionBar(toolbar);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -96,19 +98,33 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+        if(id==R.id.nav_add_profile)
+        {
+            toolbar.setTitle("Add Profile");
+            currentFragment = new Add_Profile();
+        }
+        else if(id==R.id.nav_view_profiles)
+        {
+            toolbar.setTitle("View Profiles");
+            currentFragment=new View_All_Profile();
+        }
+        else if(id==R.id.nav_health_center)
+        {
 
         }
+        else if(id==R.id.nav_change_password)
+        {
+
+        }
+        else if(id==R.id.nav_logout)
+        {
+
+        }
+
+        transaction = manager.beginTransaction();
+        transaction.replace(R.id.homeFragment, currentFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

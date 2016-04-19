@@ -59,11 +59,18 @@
         <item>AB+</item>
         <item>AB–</item>
     </string-array>
+
+
     <string name="title_activity_home">Home</string>
-
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
     <string name="action_settings">Settings</string>
+
+    <!-- menu bar text-->
+    <string name="add_profile_menu">Add Profile</string>
+    <string name="view_profiles_menu">View Profiles</string>
+    <string name="health_center_menu">Health Center</string>
+    <string name="change_password_menu">Change Password</string>
+    <string name="logout_menu">Logout</string>
 
 </resources>
