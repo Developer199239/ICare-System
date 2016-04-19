@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">ICare</string>
+    <!--Button Text-->
+    <string name="signUp_Bt">Sign Up</string>
+    <string name="add_Bt">Add</string>
+    <string name="cancel_Bt">Cancel</string>
+    <string name="dob_Bt">Pick Birth Date</string>
+
+
+    <!--EditText Hints-->
+    <string name="password_ht">Password</string>
+    <string name="userName_ht">User Name</string>
+    <string name="name_ht">Put Name</string>
+    <string name="height_ht">Height in c.m.</string>
+    <string name="weight_ht">Weight in c.m.</string>
+    <string name="major_dis_ht">Put Major Disease</string>
+
+
+    <!--TextField -->
+    <string name="welcome_tx">Welcome</string>
+    <string name="to_tx">To</string>
+    <string name="icare_tx">ICare System</string>
+    <string name="name_tx">Name</string>
+    <string name="relation_tx">Relation</string>
+    <string name="age_tx">Age</string>
+    <string name="height_tx">Height</string>
+    <string name="weight_tx">Weight</string>
+    <string name="major_dis_tx">Major Disease</string>
+    <string name="blood_group_tx">Blood Group</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+
+    <!-- relation  -->
+    <string-array name="releation_combo">
+        <item>MySelf</item>
+        <item>Father</item>
+        <item>Mother</item>
+        <item>Brother</item>
+        <item>Sister</item>
+        <item>Cousin</item>
+        <item>Uncle</item>
+        <item>Aunt</item>
+        <item>Grand\'pa</item>
+        <item>Grand\'ma</item>
+        <item>Hubby</item>
+        <item>Wife</item>
+    </string-array>
+
+    <!-- blood group -->
+    <string-array name="bloodGroup_combo">
+        <item>O+</item>
+        <item>O–</item>
+        <item>A+</item>
+        <item>A–</item>
+        <item>B+</item>
+        <item>B–</item>
+        <item>AB+</item>
+        <item>AB–</item>
+    </string-array>
+
+</resources>
