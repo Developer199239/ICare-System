@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">ICare</string>
     <!--Button Text-->
-    <string name="signUp_Bt">Sign Up</string>
+    <string name="signIn_Bt">Sign In</string>
     <string name="add_Bt">Add</string>
     <string name="cancel_Bt">Cancel</string>
     <string name="dob_Bt">Pick Birth Date</string>
