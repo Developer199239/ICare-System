@@ -34,12 +34,11 @@ public class SessionManager {
 
 	public void setInstallStatus(){
 		editor.putString(IS_FIRST_INSTALL,"False");
+		editor.commit();
 	}
 	public boolean getInstallStatus(){
 		if(perf.getString(IS_FIRST_INSTALL,"").equals("False"))
-		{
 			return false;
-		}
 		else
 			return true;
 	}

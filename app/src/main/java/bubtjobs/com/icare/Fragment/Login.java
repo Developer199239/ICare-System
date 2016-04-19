@@ -37,6 +37,7 @@ public class Login extends Fragment {
         sessionManager=new SessionManager(view.getContext());
         commonFunction=new CommonFunction();
 
+       //Toast.makeText(getActivity(), ""+sessionManager.getInstallStatus(), Toast.LENGTH_SHORT).show();
         if(sessionManager.getInstallStatus()==true)
             login_bt.setText("Sign Up");
     }
@@ -58,7 +59,17 @@ public class Login extends Fragment {
             transaction.commit();
         }
         else{
-            Toast.makeText(getActivity(), "in", Toast.LENGTH_SHORT).show();
+                if(sessionManager.getUserName(userNameEt.getText().toString(),passwordEt.getText().toString()))
+                {
+                    Add_Profile add_profile=new Add_Profile();
+                    FragmentManager manager= getFragmentManager();
+                    FragmentTransaction transaction=manager.beginTransaction();
+                    transaction.replace(R.id.myFragment, add_profile);
+                    transaction.commit();
+                }
+                else{
+                    Toast.makeText(getActivity(), "Unauthorize person", Toast.LENGTH_SHORT).show();
+                }
         }
         }
 
